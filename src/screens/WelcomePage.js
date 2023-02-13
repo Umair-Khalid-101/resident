@@ -108,7 +108,10 @@ function WelcomePage(props) {
         ) : (
           ""
         )}
-        <TouchableOpacity style={styles.buttoncontainer}>
+        <TouchableOpacity
+          style={styles.buttoncontainer}
+          onPress={() => navigation.navigate("Notification")}
+        >
           <View style={{ display: "flex", flexDirection: "row" }}>
             <View
               style={{
@@ -160,7 +163,7 @@ function WelcomePage(props) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.bluebox}
-          onPress={() => navigation.navigate("PickupRequestSent")}
+          onPress={() => navigation.navigate("GenerateRequest")}
         >
           <View
             style={{

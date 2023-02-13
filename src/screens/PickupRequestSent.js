@@ -51,7 +51,7 @@ export default function PickupRequestSent() {
             />
           </View>
 
-          {loaded ? <Text style={styles.text1}>Send Notification</Text> : ""}
+          {loaded ? <Text style={styles.text1}>Pickup Request</Text> : ""}
         </View>
         <View style={styles.greyline}></View>
         <View style={styles.whitebox}>
@@ -69,7 +69,12 @@ export default function PickupRequestSent() {
             ""
           )}
         </View>
-        <TouchableOpacity style={styles.buttoncontainer}>
+        <TouchableOpacity
+          style={styles.buttoncontainer}
+          onPress={() =>
+            navigation.navigate("TabNavigator", { screen: "Pickup Request" })
+          }
+        >
           <View style={{ display: "flex", flexDirection: "row" }}>
             <AntDesign
               name="bells"
