@@ -19,6 +19,9 @@ import { colors } from "../constans/colors";
 import VectorMainPage from "../Svgs/VectorMainPage";
 import MainPageMunsLogo from "../Svgs/MainPageMunsLogo";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 function WelcomePage(props) {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
@@ -104,6 +107,95 @@ function WelcomePage(props) {
         ) : (
           ""
         )}
+        <TouchableOpacity style={styles.buttoncontainer}>
+          <View style={{ display: "flex", flexDirection: "row" }}>
+            <View
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                backgroundColor: colors.lightblue,
+                justifyContent: "center",
+                alignItems: "center",
+                marginLeft: 10,
+              }}
+            >
+              <MaterialCommunityIcons
+                name="timer-sand-empty"
+                size={24}
+                color="#24A2FD"
+              />
+            </View>
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {loaded ? (
+                <Text style={styles.text4}>View All Notifications</Text>
+              ) : (
+                ""
+              )}
+              {loaded ? (
+                <Text style={styles.text5}>
+                  See All the previous notifications
+                </Text>
+              ) : (
+                ""
+              )}
+            </View>
+          </View>
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color="#94A1B2"
+            style={{
+              position: "absolute",
+              alignSelf: "flex-end",
+              right: 20,
+            }}
+          />
+        </TouchableOpacity>
+        <View style={styles.bluebox}>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <View>
+              {loaded ? <Text style={styles.text6}>Request Pickup</Text> : ""}
+              {loaded ? (
+                <Text style={styles.text7}>Ask for Muns TrashValet pickup</Text>
+              ) : (
+                ""
+              )}
+            </View>
+            <View
+              style={{
+                width: 60,
+                height: 60,
+                borderRadius: 30,
+                backgroundColor: colors.lightblue,
+                marginRight: 20,
+                borderWidth: 1,
+                borderColor: colors.grey,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <MaterialCommunityIcons
+                name="bus-school"
+                size={24}
+                color="white"
+              />
+            </View>
+          </View>
+        </View>
+        {loaded ? <Text style={styles.recentnoti}>Follow Us On</Text> : ""}
       </View>
     </SafeAreaView>
   );
@@ -201,5 +293,53 @@ const styles = StyleSheet.create({
 
     marginTop: 15,
     marginLeft: 10,
+  },
+  buttoncontainer: {
+    width: "90%",
+    height: 80,
+    display: "flex",
+    justifyContent: "center",
+    alignSelf: "center",
+    borderRadius: 16,
+    backgroundColor: "white",
+
+    elevation: 1,
+    marginTop: 10,
+  },
+  text4: {
+    fontFamily: "CircularStd",
+    fontSize: 14,
+    marginLeft: 20,
+    marginTop: 1,
+  },
+  text5: {
+    fontFamily: "CircularStd",
+    fontSize: 12,
+    marginLeft: 20,
+    marginTop: 5,
+    color: "#94A1B2",
+  },
+  bluebox: {
+    height: 100,
+    width: "90%",
+    backgroundColor: colors.primary,
+    alignSelf: "center",
+    marginTop: 15,
+    borderRadius: 16,
+    justifyContent: "center",
+  },
+  text6: {
+    color: "white",
+    fontSize: 16,
+    fontFamily: "CircularStd",
+    marginLeft: 20,
+    marginTop: 5,
+  },
+  text7: {
+    color: "white",
+    fontSize: 12,
+    fontFamily: "CircularStd",
+    marginLeft: 20,
+    marginTop: 5,
   },
 });
