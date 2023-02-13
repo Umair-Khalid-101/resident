@@ -20,8 +20,9 @@ import VectorMainPage from "../Svgs/VectorMainPage";
 import MainPageMunsLogo from "../Svgs/MainPageMunsLogo";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 function WelcomePage(props) {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
@@ -196,6 +197,32 @@ function WelcomePage(props) {
           </View>
         </View>
         {loaded ? <Text style={styles.recentnoti}>Follow Us On</Text> : ""}
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "90%",
+            alignSelf: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <View style={styles.social}>
+            <FontAwesome5 name="facebook" size={30} color={colors.grey} />
+          </View>
+          <View style={styles.social}>
+            <Entypo
+              name="instagram-with-circle"
+              size={32}
+              color={colors.grey}
+            />
+          </View>
+          <View style={styles.social}>
+            <Entypo name="twitter-with-circle" size={32} color={colors.grey} />
+          </View>
+          <View style={styles.social}>
+            <Entypo name="youtube-with-circle" size={32} color={colors.grey} />
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -341,5 +368,16 @@ const styles = StyleSheet.create({
     fontFamily: "CircularStd",
     marginLeft: 20,
     marginTop: 5,
+  },
+  social: {
+    display: "flex",
+    height: 80,
+    width: 80,
+    borderRadius: 16,
+    elevation: 1,
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
   },
 });
