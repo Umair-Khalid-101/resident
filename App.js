@@ -8,6 +8,7 @@ import SignUp from "./src/screens/SignUp";
 import AccountCreated from "./src/screens/AccountCreated";
 import WelcomePage from "./src/screens/WelcomePage";
 import TabNavigator from "./src/constans/TabNavigator";
+import PickupRequestSent from "./src/screens/PickupRequestSent";
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -47,6 +48,11 @@ function App() {
         <Stack.Screen
           name="TabNavigator"
           component={TabNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PickupRequestSent"
+          component={PickupRequestSent}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

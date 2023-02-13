@@ -158,7 +158,10 @@ function WelcomePage(props) {
             }}
           />
         </TouchableOpacity>
-        <View style={styles.bluebox}>
+        <TouchableOpacity
+          style={styles.bluebox}
+          onPress={() => navigation.navigate("PickupRequestSent")}
+        >
           <View
             style={{
               display: "flex",
@@ -195,7 +198,7 @@ function WelcomePage(props) {
               />
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
         {loaded ? <Text style={styles.recentnoti}>Follow Us On</Text> : ""}
         <View
           style={{
@@ -372,7 +375,7 @@ const styles = StyleSheet.create({
   social: {
     display: "flex",
     height: 80,
-    width: 80,
+    width: "20%",
     borderRadius: 16,
     elevation: 1,
     backgroundColor: "white",

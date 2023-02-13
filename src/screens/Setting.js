@@ -31,6 +31,27 @@ export default function Setting() {
       <View style={styles.greyline}></View>
       <TouchableOpacity style={styles.buttoncontainer}>
         <View style={{ display: "flex", flexDirection: "row" }}>
+          <MaterialCommunityIcons
+            name="account-circle-outline"
+            size={24}
+            color="#94A1B2"
+            style={{ marginLeft: 20 }}
+          />
+          {loaded ? <Text style={styles.text2}>Account Setting</Text> : ""}
+        </View>
+        <Ionicons
+          name="chevron-forward"
+          size={24}
+          color="#94A1B2"
+          style={{
+            position: "absolute",
+            alignSelf: "flex-end",
+            right: 20,
+          }}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttoncontainer}>
+        <View style={{ display: "flex", flexDirection: "row" }}>
           <AntDesign
             name="bells"
             size={24}
