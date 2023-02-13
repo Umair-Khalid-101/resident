@@ -66,7 +66,7 @@ function SignIn(props) {
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.getstarted}
-            onPress={() => navigation.navigate("TabNavigation")}
+            onPress={() => navigation.navigate("WelcomePage")}
           >
             {loaded ? <Text style={styles.getstartedtext}>Sign In</Text> : ""}
           </TouchableOpacity>

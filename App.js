@@ -5,6 +5,8 @@ import SplashScreen from "./src/screens/SplashScreen";
 import MainPage from "./src/screens/MainPage";
 import SignIn from "./src/screens/SignIn";
 import SignUp from "./src/screens/SignUp";
+import AccountCreated from "./src/screens/AccountCreated";
+import WelcomePage from "./src/screens/WelcomePage";
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -29,6 +31,16 @@ function App() {
         <Stack.Screen
           name="SignUp"
           component={SignUp}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AccountCreated"
+          component={AccountCreated}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="WelcomePage"
+          component={WelcomePage}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
