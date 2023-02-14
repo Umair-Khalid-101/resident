@@ -11,6 +11,15 @@ import TabNavigator from "./src/constans/TabNavigator";
 import PickupRequestSent from "./src/screens/PickupRequestSent";
 import ViewPickupRequest from "./src/screens/ViewPickupRequest";
 import GenerateRequest from "./src/screens/GenerateRequest";
+import EditPickupLocation from "./src/screens/EditPickupLocation";
+import AccountSetting from "./src/screens/AccountSetting";
+import WriteUs from "./src/screens/WriteUs";
+import AboutUs from "./src/screens/AboutUs";
+import PrivacyPolicy from "./src/screens/PrivacyPolicy";
+import TermsConditions from "./src/screens/TermsConditions";
+import ViewAllNotifications from "./src/screens/Notification";
+import Status from "./src/screens/Status";
+import EditAccountSetting from "./src/screens/EditAccountSetting";
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -65,6 +74,46 @@ function App() {
         <Stack.Screen
           name="GenerateRequest"
           component={GenerateRequest}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="EditPickupLocation"
+          component={EditPickupLocation}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AccountSetting"
+          component={AccountSetting}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="WriteUs"
+          component={WriteUs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AboutUs"
+          component={AboutUs}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PrivacyPolicy"
+          component={PrivacyPolicy}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="TermsConditions"
+          component={TermsConditions}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Status"
+          component={Status}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="EditAccountSetting"
+          component={EditAccountSetting}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

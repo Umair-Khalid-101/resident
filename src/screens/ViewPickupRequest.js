@@ -88,7 +88,7 @@ export default function ViewPickupRequest() {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.viewbutton}
-        onPress={() => navigation.navigate("Notification")}
+        onPress={() => navigation.navigate("Status")}
       >
         {loaded ? <Text style={styles.text6}>View Status</Text> : ""}
       </TouchableOpacity>

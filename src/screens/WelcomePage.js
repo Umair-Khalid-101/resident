@@ -212,22 +212,22 @@ function WelcomePage(props) {
             justifyContent: "space-between",
           }}
         >
-          <View style={styles.social}>
+          <TouchableOpacity style={styles.social}>
             <FontAwesome5 name="facebook" size={30} color={colors.grey} />
-          </View>
-          <View style={styles.social}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.social}>
             <Entypo
               name="instagram-with-circle"
               size={32}
               color={colors.grey}
             />
-          </View>
-          <View style={styles.social}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.social}>
             <Entypo name="twitter-with-circle" size={32} color={colors.grey} />
-          </View>
-          <View style={styles.social}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.social}>
             <Entypo name="youtube-with-circle" size={32} color={colors.grey} />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>

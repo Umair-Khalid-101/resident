@@ -11,8 +11,9 @@ import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+import { useNavigation } from "@react-navigation/native";
 export default function Setting() {
+  const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
   const loadfonts = async () => {
     await Font.loadAsync({
@@ -29,7 +30,10 @@ export default function Setting() {
     <SafeAreaView style={styles.container}>
       {loaded ? <Text style={styles.text1}>Setting</Text> : ""}
       <View style={styles.greyline}></View>
-      <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity
+        style={styles.buttoncontainer}
+        onPress={() => navigation.navigate("AccountSetting")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <MaterialCommunityIcons
             name="account-circle-outline"
@@ -71,7 +75,10 @@ export default function Setting() {
           }}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity
+        style={styles.buttoncontainer}
+        onPress={() => navigation.navigate("WriteUs")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <MaterialCommunityIcons
             name="file-edit-outline"
@@ -92,7 +99,10 @@ export default function Setting() {
           }}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity
+        style={styles.buttoncontainer}
+        onPress={() => navigation.navigate("TermsConditions")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <FontAwesome
             name="file-text-o"
@@ -113,7 +123,10 @@ export default function Setting() {
           }}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity
+        style={styles.buttoncontainer}
+        onPress={() => navigation.navigate("PrivacyPolicy")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <MaterialCommunityIcons
             name="file-lock-outline"
@@ -135,7 +148,10 @@ export default function Setting() {
           }}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.buttoncontainer}>
+      <TouchableOpacity
+        style={styles.buttoncontainer}
+        onPress={() => navigation.navigate("AboutUs")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <AntDesign
             name="exclamationcircleo"
@@ -156,7 +172,10 @@ export default function Setting() {
           }}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.redbutton}>
+      <TouchableOpacity
+        style={styles.redbutton}
+        onPress={() => navigation.navigate("MainPage")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
           <Ionicons
             name="power-outline"

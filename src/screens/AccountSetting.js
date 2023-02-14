@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-
+import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import * as Font from "expo-font";
 import Back from "../Svgs/Back";
@@ -20,8 +20,7 @@ import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors } from "../constans/colors";
 import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-export default function GenerateRequest() {
+export default function AccountSetting() {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
 
@@ -47,46 +46,10 @@ export default function GenerateRequest() {
             />
           </View>
         </TouchableOpacity>
-        {loaded ? <Text style={styles.text1}>Request Pickup</Text> : ""}
+        {loaded ? <Text style={styles.text1}>Account Setting</Text> : ""}
       </View>
       <View style={styles.greyline}></View>
-      <TouchableOpacity
-        style={styles.filebox}
-        onPress={() => navigation.navigate("Notification")}
-      >
-        <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.colorbox}>
-            <AntDesign name="clockcircleo" size={24} color="white" />
-          </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <View
-              style={{
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              {loaded ? (
-                <Text style={styles.text3}>9 minutes left for the pickup</Text>
-              ) : (
-                ""
-              )}
-            </View>
-            {loaded ? (
-              <Text style={styles.text5}>
-                After that it won't be possible for us to pickup
-              </Text>
-            ) : (
-              ""
-            )}
-          </View>
-        </View>
-      </TouchableOpacity>
+      {loaded ? <Text style={styles.text7}>Personal Details</Text> : ""}
       <View
         style={{
           display: "flex",
@@ -97,46 +60,100 @@ export default function GenerateRequest() {
           marginTop: 25,
         }}
       >
-        {loaded ? <Text style={styles.text8}>Location</Text> : ""}
-        <TouchableOpacity
-          style={{
-            width: 80,
-            height: 40,
-            borderRadius: 16,
-            borderWidth: 1,
-            borderColor: colors.primary,
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            flexDirection: "row",
-          }}
-          onPress={() => navigation.navigate("EditPickupLocation")}
-        >
-          <MaterialIcons name="edit" size={16} color={colors.primary} />
-          {loaded ? <Text style={styles.text2}>Edit</Text> : ""}
-        </TouchableOpacity>
+        {loaded ? <Text style={styles.text8}>Email</Text> : ""}
+        {loaded ? <Text style={styles.text9}>hello@example.com</Text> : ""}
       </View>
-      <View style={styles.dataview}>
-        {loaded ? <Text style={styles.text7}>Property</Text> : ""}
-        {loaded ? <Text style={styles.text9}>Lake Fairway</Text> : ""}
+      <View style={styles.greyline2}></View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>Password</Text> : ""}
+        {loaded ? <Text style={styles.text9}>●●●●●●●●●●●</Text> : ""}
       </View>
-      <View style={styles.dataview}>
-        {loaded ? <Text style={styles.text7}>Apartment #</Text> : ""}
+      <View style={styles.greyline2}></View>
+      {loaded ? <Text style={styles.text7}>Location Details</Text> : ""}
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>Apartment #</Text> : ""}
         {loaded ? <Text style={styles.text9}>267-ADK</Text> : ""}
       </View>
-      <View style={styles.dataview}>
-        {loaded ? <Text style={styles.text7}>City</Text> : ""}
-        {loaded ? <Text style={styles.text9}>El Paso</Text> : ""}
-      </View>
-      <View style={styles.dataview}>
-        {loaded ? <Text style={styles.text7}>State</Text> : ""}
+      <View style={styles.greyline2}></View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>State</Text> : ""}
         {loaded ? <Text style={styles.text9}>Texas</Text> : ""}
       </View>
+      <View style={styles.greyline2}></View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>City</Text> : ""}
+        {loaded ? <Text style={styles.text9}>El Paso</Text> : ""}
+      </View>
+      <View style={styles.greyline2}></View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>Property</Text> : ""}
+        {loaded ? <Text style={styles.text9}>Lake Fairway</Text> : ""}
+      </View>
+      <View style={styles.greyline2}></View>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "90%",
+          alignSelf: "center",
+          justifyContent: "space-between",
+          marginTop: 25,
+        }}
+      >
+        {loaded ? <Text style={styles.text8}>Time</Text> : ""}
+        {loaded ? <Text style={styles.text9}>2:25 P.M.</Text> : ""}
+      </View>
+      <View style={styles.greyline2}></View>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("PickupRequestSent")}
+        onPress={() => navigation.navigate("EditAccountSetting")}
       >
-        {loaded ? <Text style={styles.text10}>Request Pickup</Text> : ""}
+        {loaded ? <Text style={styles.text10}>Edit Account Setting</Text> : ""}
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -157,10 +174,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     position: "absolute",
   },
-  text2: {
+  text7: {
+    fontSize: 16,
     fontFamily: "CircularStd",
-    fontSize: 14,
-    color: colors.primary,
+    left: 16,
+    marginTop: 20,
   },
   back: {
     alignSelf: "flex-start",
@@ -187,19 +205,25 @@ const styles = StyleSheet.create({
     width: "90%",
     height: 70,
     alignSelf: "center",
-    backgroundColor: colors.lightyellow,
+    backgroundColor: colors.lightgreen,
 
     borderRadius: 16,
     marginTop: 10,
 
     justifyContent: "center",
   },
-
+  text2: {
+    fontSize: 14,
+    fontFamily: "CircularStd",
+    color: colors.grey,
+    marginTop: 10,
+    left: 16,
+  },
   colorbox: {
     width: 50,
     height: 50,
     borderRadius: 16,
-    backgroundColor: colors.yellow,
+    backgroundColor: colors.green,
     marginLeft: 10,
     display: "flex",
     justifyContent: "center",
@@ -211,24 +235,18 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 10,
   },
-  text9: {
+  text4: {
+    alignSelf: "center",
     fontFamily: "CircularStd",
     fontSize: 14,
-    marginTop: 10,
+    marginLeft: 10,
+    color: colors.green,
   },
-
   text5: {
     fontSize: 10,
     color: colors.grey,
     fontFamily: "CircularStd",
     marginLeft: 10,
-    marginTop: 2,
-  },
-  text7: {
-    fontSize: 12,
-    color: colors.grey,
-    fontFamily: "CircularStd",
-
     marginTop: 2,
   },
   text6: {
@@ -250,14 +268,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   text8: {
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: "CircularStd",
   },
-  dataview: {
-    display: "flex",
-    width: "90%",
-    alignSelf: "center",
-    marginTop: 20,
+  text9: {
+    fontFamily: "CircularStd",
+    color: colors.grey,
+    fontSize: 14,
   },
   button: {
     width: "90%",

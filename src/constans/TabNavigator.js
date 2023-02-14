@@ -7,6 +7,11 @@ import Setting from "../screens/Setting";
 import Notification from "../screens/Notification";
 import { AntDesign } from "@expo/vector-icons";
 import WelcomePage from "../screens/WelcomePage";
+import WriteUs from "../screens/WriteUs";
+import AboutUs from "../screens/AboutUs";
+import PrivacyPolicy from "../screens/PrivacyPolicy";
+import TermsConditions from "../screens/TermsConditions";
+import ViewAllNotifications from "../screens/Notification";
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();

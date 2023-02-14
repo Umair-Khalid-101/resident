@@ -18,6 +18,8 @@ import { AntDesign } from "@expo/vector-icons";
 import { SelectList } from "react-native-dropdown-select-list";
 import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { colors } from "../constans/colors";
 export default function Notification() {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
@@ -36,113 +38,187 @@ export default function Notification() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.nav}>
-        <TouchableOpacity>
-          <View>
-            <Back
-              style={styles.back}
-              onPress={() => navigation.navigate("TabNavigator")}
-            />
-          </View>
-        </TouchableOpacity>
-        {loaded ? <Text style={styles.text1}>Notification</Text> : ""}
+        {loaded ? <Text style={styles.text1}>Notfications</Text> : ""}
       </View>
       <View style={styles.greyline}></View>
-      <View style={styles.redbutton}>
+      {loaded ? <Text style={styles.text2}>Today</Text> : ""}
+      <TouchableOpacity
+        style={styles.filebox}
+        onPress={() => navigation.navigate("ViewPickupRequest")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.circle2}>
-            <MaterialIcons name="done" size={18} color="white" />
+          <View style={styles.colorbox}>
+            <AntDesign name="clockcircleo" size={24} color={colors.yellow} />
           </View>
-          <View style={styles.circle}>
-            <AntDesign name="clockcircleo" size={24} color="#FFB317" />
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {loaded ? (
+                <Text style={styles.text3}>
+                  Dear resident your valet will be..
+                </Text>
+              ) : (
+                ""
+              )}
+            </View>
+            {loaded ? <Text style={styles.text5}>2:24 P.M.</Text> : ""}
           </View>
-          {loaded ? (
-            <Text style={styles.text3}>
-              Dear resident your valet will be arriving in 1 hour. Please have
-              your trash ready
-            </Text>
-          ) : (
-            ""
-          )}
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color="#94A1B2"
+            style={{
+              position: "absolute",
+
+              right: 20,
+              alignSelf: "center",
+            }}
+          />
         </View>
-      </View>
-      <View style={styles.verticalline}></View>
-      <View style={styles.redbutton2}>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.filebox}
+        onPress={() => navigation.navigate("ViewPickupRequest")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.circle2}>
-            <MaterialIcons name="done" size={18} color="white" />
+          <View style={styles.colorbox}>
+            <AntDesign name="clockcircleo" size={24} color={colors.yellow} />
           </View>
-          <View style={styles.circle3}>
-            <MaterialCommunityIcons
-              name="timer-sand-empty"
-              size={24}
-              color="#24A2FD"
-            />
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {loaded ? (
+                <Text style={styles.text3}>
+                  Dear resident your valet will be..
+                </Text>
+              ) : (
+                ""
+              )}
+            </View>
+            {loaded ? <Text style={styles.text5}>1:30 P.M.</Text> : ""}
           </View>
-          {loaded ? (
-            <Text style={styles.text3}>
-              Dear resident your valet will arrive in 30 minutes
-            </Text>
-          ) : (
-            ""
-          )}
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color="#94A1B2"
+            style={{
+              position: "absolute",
+
+              right: 20,
+              alignSelf: "center",
+            }}
+          />
         </View>
-      </View>
-      <View style={styles.verticalline}></View>
-      <View style={styles.redbutton2}>
+      </TouchableOpacity>
+      {loaded ? <Text style={styles.text2}>12 Feb, 2023</Text> : ""}
+      <TouchableOpacity
+        style={styles.filebox}
+        onPress={() => navigation.navigate("ViewPickupRequest")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.circle2}>
-            <MaterialIcons name="done" size={18} color="white" />
+          <View style={styles.colorbox}>
+            <AntDesign name="clockcircleo" size={24} color={colors.yellow} />
           </View>
-          <View style={styles.circle4}>
-            <Feather name="trash-2" size={24} color="#7624FD" />
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {loaded ? (
+                <Text style={styles.text3}>
+                  Dear resident your valet will be..
+                </Text>
+              ) : (
+                ""
+              )}
+            </View>
+            {loaded ? <Text style={styles.text5}>2:24 P.M.</Text> : ""}
           </View>
-          {loaded ? (
-            <Text style={styles.text3}>
-              Dear Resident we have now arrived at your location for trash
-              pick-up
-            </Text>
-          ) : (
-            ""
-          )}
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color="#94A1B2"
+            style={{
+              position: "absolute",
+
+              right: 20,
+              alignSelf: "center",
+            }}
+          />
         </View>
-      </View>
-      <View style={styles.verticalline}></View>
-      <View style={styles.redbutton2}>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.filebox}
+        onPress={() => navigation.navigate("ViewPickupRequest")}
+      >
         <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.circle2}>
-            <MaterialIcons name="done" size={18} color="white" />
+          <View style={styles.colorbox}>
+            <AntDesign name="clockcircleo" size={24} color={colors.yellow} />
           </View>
-          <View style={styles.circle5}>
-            <MaterialCommunityIcons
-              name="bus-school"
-              size={24}
-              color="#FD247F"
-            />
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {loaded ? (
+                <Text style={styles.text3}>
+                  Dear resident your valet will be..
+                </Text>
+              ) : (
+                ""
+              )}
+            </View>
+            {loaded ? <Text style={styles.text5}>1:30 P.M.</Text> : ""}
           </View>
-          {loaded ? (
-            <Text style={styles.text3}>
-              We are leaving in 10 mins. Please enter app and request pickup
-            </Text>
-          ) : (
-            ""
-          )}
+          <Ionicons
+            name="chevron-forward"
+            size={24}
+            color="#94A1B2"
+            style={{
+              position: "absolute",
+
+              right: 20,
+              alignSelf: "center",
+            }}
+          />
         </View>
-      </View>
-      <View style={styles.verticalline}></View>
-      <View style={styles.redbutton2}>
-        <View style={{ display: "flex", flexDirection: "row" }}>
-          <View style={styles.circle2}>
-            <MaterialIcons name="done" size={18} color="white" />
-          </View>
-          <View style={styles.circle6}>
-            <Image
-              source={require("../../assets/check.png")}
-              style={{ width: 20, height: 20 }}
-            />
-          </View>
-          {loaded ? <Text style={styles.text4}>Thank you</Text> : ""}
-        </View>
-      </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
@@ -175,142 +251,59 @@ const styles = StyleSheet.create({
     backgroundColor: "#D6D6D6",
     marginTop: 50,
   },
-  redbutton: {
-    width: "88%",
-    height: 60,
+  filebox: {
     display: "flex",
-    justifyContent: "center",
+    width: "90%",
+    height: 70,
     alignSelf: "center",
-    borderRadius: 12,
     backgroundColor: "white",
-
-    borderColor: "black",
-    marginTop: 30,
-    marginLeft: 20,
-  },
-  redbutton2: {
-    width: "88%",
-    height: 60,
-    display: "flex",
-    justifyContent: "center",
-    alignSelf: "center",
-    borderRadius: 12,
-    backgroundColor: "white",
-
-    borderColor: "black",
+    elevation: 1,
+    borderRadius: 16,
     marginTop: 10,
-    marginLeft: 20,
+
+    justifyContent: "center",
   },
   text2: {
-    fontFamily: "CircularStd",
     fontSize: 14,
-    marginLeft: 20,
+    fontFamily: "CircularStd",
+    color: colors.grey,
     marginTop: 10,
+    left: 16,
   },
-  circle: {
-    display: "flex",
-    width: 45,
-    height: 45,
-    borderRadius: 45,
-    backgroundColor: "rgba(255, 179, 23,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 20,
-  },
-  back2: {
-    display: "flex",
-    backgroundColor: "#246BFD",
-    width: "90%",
-    height: 60,
+  colorbox: {
+    width: 50,
+    height: 50,
     borderRadius: 16,
-    alignSelf: "center",
-    position: "absolute",
-    bottom: 0,
-    marginBottom: 30,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  circle3: {
+    backgroundColor: colors.lightyellow,
+    marginLeft: 10,
     display: "flex",
-    width: 45,
-    height: 45,
-    borderRadius: 45,
-    backgroundColor: "rgba(36, 162, 253,0.1)",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 20,
-  },
-  circle4: {
-    display: "flex",
-    width: 45,
-    height: 45,
-    borderRadius: 45,
-    backgroundColor: "rgba(118, 36, 253,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 20,
-  },
-  circle5: {
-    display: "flex",
-    width: 45,
-    height: 45,
-    borderRadius: 45,
-    backgroundColor: "rgba(253, 36, 127,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 20,
-  },
-  circle6: {
-    display: "flex",
-    width: 45,
-    height: 45,
-    borderRadius: 45,
-    backgroundColor: "rgba(36, 253, 58,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 20,
-  },
-  circle2: {
-    display: "flex",
-    width: 25,
-    height: 25,
-    borderRadius: 25,
-
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#27AE60",
-    marginTop: 10,
   },
   text3: {
-    fontFamily: "CircularStd",
-    fontSize: 12,
-
-    marginTop: 8,
-    flex: 1,
-    flexWrap: "wrap",
-    marginLeft: 15,
-  },
-  text4: {
-    fontFamily: "CircularStd",
-    fontSize: 12,
-
-    marginTop: 12,
-    flex: 1,
-    flexWrap: "wrap",
-    marginLeft: 15,
-  },
-  verticalline: {
-    width: "0.5%",
-    height: 30,
-    backgroundColor: "#D6D6D6",
-    position: "relative",
-    left: 100,
-    borderRadius: 20,
-    marginTop: 5,
-  },
-  text6: {
+    alignSelf: "center",
     fontFamily: "CircularStd",
     fontSize: 14,
-    color: "white",
+    marginLeft: 10,
+  },
+  text4: {
+    alignSelf: "center",
+    fontFamily: "CircularStd",
+    fontSize: 14,
+    marginLeft: 10,
+    color: colors.green,
+  },
+  text5: {
+    fontSize: 12,
+    color: colors.grey,
+    fontFamily: "CircularStd",
+    marginLeft: 10,
+  },
+  text6: {
+    alignSelf: "center",
+    fontFamily: "CircularStd",
+    fontSize: 14,
+    marginLeft: 10,
+    color: "red",
   },
 });
