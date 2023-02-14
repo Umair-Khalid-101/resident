@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   SafeAreaView,
   Platform,
   TouchableOpacity,
@@ -16,7 +15,7 @@ import Vector from "../Svgs/Vector";
 import MunsTrashValet from "../Svgs/MunsTrashValet";
 import { colors } from "../constans/colors";
 
-function SignIn(props) {
+function SignIn() {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
 
@@ -115,6 +114,7 @@ function SignIn(props) {
 }
 
 export default SignIn;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

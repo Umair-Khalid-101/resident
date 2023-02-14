@@ -45,10 +45,7 @@ export default function WriteUs() {
           style={styles.input2}
           multiline={true}
         />
-        <TouchableOpacity
-          style={styles.getstarted}
-          onPress={() => navigation.navigate("ReportSuccessfull")}
-        >
+        <TouchableOpacity style={styles.getstarted}>
           {loaded ? (
             <Text style={styles.getstartedtext}>Send Feedback</Text>
           ) : (

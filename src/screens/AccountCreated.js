@@ -15,7 +15,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import Vector from "../Svgs/Vector";
 import { useNavigation } from "@react-navigation/native";
 import * as Font from "expo-font";
-function AccountCreated(props) {
+function AccountCreated() {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
   const loadfonts = async () => {

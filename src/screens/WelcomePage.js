@@ -317,8 +317,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: "CircularStd",
     flexWrap: "wrap",
-    width: "80%",
+    width: "70%",
     lineHeight: 15,
+    marginRight: "7%",
   },
   recentnoti: {
     fontSize: 18,

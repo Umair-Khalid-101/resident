@@ -2,7 +2,6 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   SafeAreaView,
   Platform,
   TouchableOpacity,
@@ -16,11 +15,10 @@ import * as Font from "expo-font";
 import Vector from "../Svgs/Vector";
 import MunsTrashValet from "../Svgs/MunsTrashValet";
 import { SelectList } from "react-native-dropdown-select-list";
-function SignUp(props) {
-  const [pickerValue, setPickerValue] = useState("JavaScript");
+function SignUp() {
   const navigation = useNavigation();
   const [loaded, setloaded] = useState(false);
-  const [selected, setSelected] = React.useState("");
+  const [selected, setSelected] = useState("");
 
   const data = [
     { value: "Independance Place" },

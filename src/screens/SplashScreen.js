@@ -1,4 +1,4 @@
-import { View, Text, Image, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import React, { useRef, useState, useEffect } from "react";
 import LottieView from "lottie-react-native";
 import * as Font from "expo-font";

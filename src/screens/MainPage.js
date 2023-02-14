@@ -9,7 +9,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { StatusBar } from "expo-status-bar";
 import * as Font from "expo-font";
 
 import Vector from "../Svgs/Vector";
@@ -80,7 +79,6 @@ const MainPage = () => {
           {loaded ? <Text style={styles.getstartedtext2}>Sign Up</Text> : ""}
         </TouchableOpacity>
       </View>
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };

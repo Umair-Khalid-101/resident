@@ -25,14 +25,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.sid781.resident"
+      "package": "com.umair_khalid.resident"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "e7d1eee1-3014-4e7c-a27f-f898d41a0995"
+        "projectId": "219f1942-7af8-4023-a466-a42df3c45655"
       }
     }
   }
